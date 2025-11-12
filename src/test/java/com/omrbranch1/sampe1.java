@@ -39,5 +39,39 @@ public class sampe1 {
 
 	}
 	
+	public static  void searchhotel() {
+		driver.findElement(By.
+				xpath("//android.widget.TextView[@text=\'Select State\']")).click();
+		driver.findElement(By.
+				xpath("//android.widget.TextView[@text='Andhra Pradesh']")).click();
+		driver.findElement(By.
+				xpath("//android.widget.TextView[@text=\'Select City\']")).click();
+		driver.findElement(By.xpath(
+				"//android.view.ViewGroup[@content-desc=\'Tirupati\']")).click();
+		driver.findElement(By.
+				xpath("//android.widget.TextView[@text=\'Select Room Type\']")).click();
+		driver.findElement(By.xpath(
+				"//android.view.ViewGroup[@content-desc=\'Suite\']")).click();
+		driver.findElement(By.xpath(
+				"//android.widget.EditText[@content-desc=\'search_select_checkin\']")).click(
+						);
+		driver.findElement(By.xpath("//android.view.View[@content-desc=\'12 November 2025\']")).click();
+		driver.findElement(By.xpath(	"//android.widget.Button[@resource-id=\'android:id/button1\']")).click();
+		driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\'search_select_checkout\']")).click
+		(); driver.findElement(By.xpath("//android.view.View[@content-desc=\'19 November 2025\']")).click();
+		driver.findElement(By.xpath("//android.widget.Button[@resource-id=\'android:id/button1\']")).click();
+		driver.findElement(By.xpath("//android.widget.TextView[@text=\'No. Of Room\']")).click();
+		driver.findElement(By.xpath("//android.widget.TextView[@text=\'1-One\']")).
+		click(); 
+		driver.findElement(By.xpath("//android.view.ViewGroup[@resource-id=\'search_select_no_of_adults_container\']/android.view.ViewGroup"
+				)).click();
+		driver.findElement(By.xpath("//android.widget.TextView[@text=\'1-One\']")).
+		click(); 
+		driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\'search_no_of_children\']")).
+		sendKeys("2");
+		driver.findElement(By.xpath("//android.widget.TextView[@text='Search']")).
+		click();
+
+	}
 
 }
