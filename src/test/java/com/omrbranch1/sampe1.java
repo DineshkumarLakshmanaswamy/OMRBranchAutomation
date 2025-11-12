@@ -1,13 +1,5 @@
 package com.omrbranch1;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.time.Duration;
-import java.util.Arrays;
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.PointerInput;
@@ -15,9 +7,8 @@ import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.interactions.PointerInput.Kind;
 import org.openqa.selenium.interactions.PointerInput.MouseButton;
 import org.openqa.selenium.interactions.PointerInput.Origin;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
+import org.openqa.selenium.remote.RemoteWebDriver;
 import io.appium.java_client.AppiumDriver;
 
 public class sampe1 {
@@ -48,12 +39,49 @@ public class sampe1 {
 
 
 	}
-	
+	public static  void searchhotel() {
+		driver.findElement(By.
+				xpath("//android.widget.TextView[@text=\'Select State\']")).click();
+		driver.findElement(By.
+				xpath("//android.widget.TextView[@text='Andhra Pradesh']")).click();
+		driver.findElement(By.
+				xpath("//android.widget.TextView[@text=\'Select City\']")).click();
+		driver.findElement(By.xpath(
+				"//android.view.ViewGroup[@content-desc=\'Tirupati\']")).click();
+		driver.findElement(By.
+				xpath("//android.widget.TextView[@text=\'Select Room Type\']")).click();
+		driver.findElement(By.xpath(
+				"//android.view.ViewGroup[@content-desc=\'Suite\']")).click();
+		driver.findElement(By.xpath(
+				"//android.widget.EditText[@content-desc=\'search_select_checkin\']")).click(
+						);
+		driver.findElement(By.xpath("//android.view.View[@content-desc=\'12 November 2025\']")).click();
+		driver.findElement(By.xpath(	"//android.widget.Button[@resource-id=\'android:id/button1\']")).click();
+		driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\'search_select_checkout\']")).click
+		(); driver.findElement(By.xpath("//android.view.View[@content-desc=\'19 November 2025\']")).click();
+		driver.findElement(By.xpath("//android.widget.Button[@resource-id=\'android:id/button1\']")).click();
+		driver.findElement(By.xpath("//android.widget.TextView[@text=\'No. Of Room\']")).click();
+		driver.findElement(By.xpath("//android.widget.TextView[@text=\'1-One\']")).
+		click(); 
+		driver.findElement(By.xpath("//android.view.ViewGroup[@resource-id=\'search_select_no_of_adults_container\']/android.view.ViewGroup"
+				)).click();
+		driver.findElement(By.xpath("//android.widget.TextView[@text=\'1-One\']")).
+		click(); 
+		driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\'search_no_of_children\']")).
+		sendKeys("2");
+		driver.findElement(By.xpath("//android.widget.TextView[@text='Search']")).
+		click();
+
+	}
+
 	public static  void getTextHtel() {
 		WebElement element = driver.findElement(By.xpath(
 				"//android.widget.TextView[@resource-id='select_hotel_text']")); 
 		String text
 		= element.getText(); System.out.println(text);
+
+
+
 
 	}
 	public static void swipe() {
